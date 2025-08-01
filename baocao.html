@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo cáo - CheckUyTin24H</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="CheckUyTin24H Logo">
+      <span>CheckUyTin24H</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="tracuu.html">Tra cứu</a></li>
+        <li><a href="baocao.html" class="active">Báo cáo</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Gửi báo cáo giao dịch</h1>
+    <p>Điền thông tin để gửi phản ánh cho CheckUyTin24H</p>
+    
+    <form class="report-form" onsubmit="submitReport(event)">
+      <input type="text" id="reportName" placeholder="Tên hoặc nickname" required>
+      <input type="text" id="reportPhone" placeholder="Số điện thoại hoặc link Facebook" required>
+      <input type="number" id="reportAmount" placeholder="Số tiền giao dịch (VNĐ)" required>
+      <textarea id="reportNote" placeholder="Mô tả chi tiết sự việc..." rows="5" required></textarea>
+      <button type="submit" class="btn">Gửi báo cáo</button>
+    </form>
+
+    <div id="reportResult" class="result-box" style="display:none;"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 CheckUyTin24H - Quỹ Bảo Hiểm Giao Dịch Uy Tín</p>
+  </footer>
+
+  <script>
+    function submitReport(event) {
+      event.preventDefault();
+      const result = document.getElementById('reportResult');
+      result.innerHTML = "✅ Báo cáo của bạn đã được gửi. Chúng tôi sẽ xử lý trong thời gian sớm nhất!";
+      result.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
